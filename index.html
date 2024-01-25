@@ -235,7 +235,7 @@
                 </table>
             `;
         }
-
+// Menu functions
         function showMenu() {
             document.getElementById('menu-popup').style.display = 'flex';
         }
@@ -244,6 +244,7 @@
             document.getElementById('menu-popup').style.display = 'none';
         }
 
+        // Export to CSV function
         function exportToCSV() {
             const csvContent = "data:text/csv;charset=utf-8," +
                 "Type,Amount,Category,Date\n" +
@@ -258,16 +259,6 @@
             document.body.appendChild(link); // Required for FF
 
             link.click();
-        }
-
-        function updateBalance() {
-            document.getElementById('content').innerHTML += `
-                <h2>Balance: ${budgetData.balance.toFixed(2)}</h2>
-            `;
-        }
-
-        function saveToLocalStorage() {
-            localStorage.setItem('budgetData', JSON.stringify(budgetData));
         }
     </script>
 </body>
